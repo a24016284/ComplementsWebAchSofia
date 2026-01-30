@@ -6,12 +6,28 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>TD1</h1>
-    <h2>Températures aléatoires</h2>
-    <p id ="message"> </p>
-    <p id = "température">température : <span id="valeur" data-unit="°C"></span></p>
-    <h3>Historique des températures</h3>
-    <ul id ="historiquetemp"></ul>
+    <h1 >TD1</h1>
+    
+    <button id ="buttontemp">Températures</button>
+    <button id ="buttonhistorique">Historique</button>
+    
+    
+    <section id = "temperatureAl">
+        <h2>Températures aléatoires</h2>
+
+        <p id ="message" role = "alert" aria-atomic="true"> </p>
+        <p id = "temperature">température : <span id="valeur" aria-live="polite" aria-atomic="true" ></span></p>
+
+    </section>
+    
+
+    <section id = "historiquetempAl">
+        <h3>Historique des températures</h3>
+
+        <ul id ="historiquetemp" aria-live="polite" aria-relevant="additions"></ul>
+    </section>
+    
     <script src="td1.js"></script>
+
 </body>
 </html>
