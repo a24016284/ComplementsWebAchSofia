@@ -22,7 +22,7 @@ class thermometre {
 
     // Fonction pour afficher la valeur dans le HTML
     generervaleur(A_tableau, I_i) {
-        var O_valeur = document.getElementById("valeur"); 
+        var O_valeur = document.getElementById("temp"); 
         var A_tableautemp = []; // Tableau pour stocker l'historique des températures
         
         var O_Interval = setInterval(() => {  
@@ -93,17 +93,20 @@ class thermometre {
         let O_sectionHistorique = document.getElementById("historiquetempAl");
 
         O_sectionHistorique.hidden = true;
-        O_sectionTemperature.hidden = true;
+        O_sectionTemperature.hidden = false;
 
 
         O_buttonHistorique.addEventListener("click", function () {
-            O_sectionHistorique.hidden = false;
-            O_sectionTemperature.hidden = true;
+                O_sectionHistorique.hidden = false;
+                O_sectionTemperature.hidden = true;
+                console.log("changement de page : Historique");
         });
 
         O_buttonTemperature.addEventListener("click", function() {
             O_sectionHistorique.hidden = true;
             O_sectionTemperature.hidden = false;
+            console.log("changement de page : Température");
+
         });
 
 
